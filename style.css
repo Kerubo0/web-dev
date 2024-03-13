@@ -1,154 +1,149 @@
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #212121;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #212121;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 @media (max-width: 600px) {
-    body {
-        margin: auto;
-    }    
+  body {
+    margin: auto;
+  }
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .column {
-        flex-direction: column;
-    }
-
-.navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    background-color: #3d3d3d;
-   color: white;
+  flex-direction: column;
 }
 
-.brand-logo{
-    width: 150px;
-    
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: #3d3d3d;
+  color: white;
+}
+
+.brand-logo {
+  width: 150px;
 }
 
 .navbar-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1; /* This ensures that the nav-links section takes up the maximum available space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; /* This ensures that the nav-links section takes up the maximum available space */
 }
 
 .navbar-links a {
-    margin: 0 10px; /* Adjust spacing between links as needed */
+  margin: 0 10px; /* Adjust spacing between links as needed */
 }
 
-.navbar-links ul{
-    margin: 0 ;
-    padding: 0;
-    display: flex;
-      
-}    
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
 
-.navbar-links li{
-    list-style: none;
+.navbar-links li {
+  list-style: none;
 }
 
 .navbar-links li a {
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-    display: block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
 }
 
-.navbar-links li:hover{
-    border-bottom: 2px solid #6e6e6e;
-    padding-bottom: 4px;
-    transition: ease-in 0.5s
+.navbar-links li:hover {
+  border-bottom: 2px solid #6e6e6e;
+  padding-bottom: 4px;
+  transition: ease-in 0.5s;
 }
 
-.toggle-button{
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar-links {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-
-.toggle-button .bar{
-    height: 3px;
     width: 100%;
-    background-color: white;
-    border-radius: 10px;
-}
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-@media (max-width: 768px){
-    .toggle-button{
-        display: flex;
-    }
-    .navbar-links{
-        display: none;
-        width: 100%;
-    }
-    .navbar{
-        flex-direction: column;
-        align-items: flex-start;
-    }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
 
-    .navbar-links ul{
-        width: 100%;
-        flex-direction: column;
-    }
+  .navbar-links li {
+    text-align: center;
+  }
 
-    .navbar-links li{
-        text-align: center;
-    }
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
 
-    .navbar-links li a {
-        padding:  .5rem 1rem;
-    }
-
-    .navbar-links.active{
-        display: flex;
-    }
-   
+  .navbar-links.active {
+    display: flex;
+  }
 }
 
 /*  HERO */
 
-.hero{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.hero-text{
-    text-align: center;
-    color: white;
-    max-width: 900px;
+.hero-text {
+  text-align: center;
+  color: white;
+  max-width: 900px;
 }
 
-.image-icons{
-    position: relative;
+.image-icons {
+  position: relative;
 }
-
 
 .ellipse-div,
 .frame-child1,
@@ -165,373 +160,372 @@ body{
 }
 
 .ellipse-div {
-    bottom: 320px;
-    left: 130px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  }
-  .frame-child1 {
-    top: 130px;
-    left: 280px;
-  }
-  .frame-child2 {
-    top: 150px;
-   right: 300px;
-    width: 70px;
-    height: 70px;
-  }
-  
-  .frame-child3{
-     top: 240px;
-     left: 300px;
-     width: 70px;
-     height: 70px;
-  }
-  
-  .frame-child4 {
-    top: 250px;
-    right: 300px;
-    width: 70px;
-    height: 71px;
-  }
-
-  #blue{
-    position: absolute;
-    bottom: 85%;
-    right: 45%;
-    width: 70px;
-    height: 70px;
+  bottom: 320px;
+  left: 130px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.frame-child1 {
+  top: 130px;
+  left: 280px;
+}
+.frame-child2 {
+  top: 150px;
+  right: 300px;
+  width: 70px;
+  height: 70px;
 }
 
+.frame-child3 {
+  top: 240px;
+  left: 300px;
+  width: 70px;
+  height: 70px;
+}
+
+.frame-child4 {
+  top: 250px;
+  right: 300px;
+  width: 70px;
+  height: 71px;
+}
+
+#blue {
+  position: absolute;
+  bottom: 85%;
+  right: 45%;
+  width: 70px;
+  height: 70px;
+}
 
 #crocodile {
-    position: absolute;
-    bottom: 50%;
-   left: 80%;
-    width: 50px;
-    height: 50px;
+  position: absolute;
+  bottom: 50%;
+  left: 80%;
+  width: 50px;
+  height: 50px;
 }
 
-#red{
-    position: absolute;
-    bottom: 20%;
-    left: 85%;
-    width: 60px;
-    height: 60px;
+#red {
+  position: absolute;
+  bottom: 20%;
+  left: 85%;
+  width: 60px;
+  height: 60px;
 }
 
-#yellow{
-    position: absolute;
-    top: 70%;
-    right: 87%;
-    width: 50px;
-    height: 50px;
+#yellow {
+  position: absolute;
+  top: 70%;
+  right: 87%;
+  width: 50px;
+  height: 50px;
 }
 
-#figma{
-    position: absolute;
-    bottom: 45%;
-    right: 85%;
-    width: 50px;
-    height: 50px;
+#figma {
+  position: absolute;
+  bottom: 45%;
+  right: 85%;
+  width: 50px;
+  height: 50px;
 }
 
-.hero-explainer{
-    color: white;
-    text-align: center;
+.hero-explainer {
+  color: white;
+  text-align: center;
 }
 
 .btn {
-    padding: 10px 20px;
-    width: 200px;
-    width: 20vw;
-    min-width: 200px;
-    margin: 20px;
-    border-radius: 12px;
-    font-weight: bold;
-    border: none;
-  }
+  padding: 10px 20px;
+  width: 200px;
+  width: 20vw;
+  min-width: 200px;
+  margin: 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  border: none;
+}
 
-  .btn:hover {
-    cursor: pointer;
-  }
+.btn:hover {
+  cursor: pointer;
+}
 
-  .primary {
-    background-image: linear-gradient(to bottom, #FFD150, #d49e08);
-  }
+.primary {
+  background-image: linear-gradient(to bottom, #ffd150, #d49e08);
+}
 
-  h1, h2, h3 ,h4, h5 ,h6 ,p {
-    color: white;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: white;
+}
 
-  .hero-block {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 60px 28px 0px 28px; 
-    gap: 28px;
-    }
-    
-    .hero-block > * {
-        flex: 1 1 ;
-    max-width: 45%;
-    }
+.hero-block {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 28px 0px 28px;
+  gap: 28px;
+}
 
-    .hero-image-one{
-        position: relative;
-        max-width: 500px;
-    }
+.hero-block > * {
+  flex: 1 1;
+  max-width: 45%;
+}
 
-    .man-one{
-        position: absolute;
-        top: 10px;
-        left: 170px;
-        height: 350px;
-    }
+.hero-image-one {
+  position: relative;
+  max-width: 500px;
+}
 
-    #six{
-     position: absolute;
-     top: 30px;
-     left: 25px;
-    }
+.man-one {
+  position: absolute;
+  top: 10px;
+  left: 170px;
+  height: 350px;
+}
 
-.hero-block-two{
-    display: flex;
-    flex-direction: row-reverse;
-    /*flex-wrap: wrap;*/
-    padding: 60px 28px 0px 28px; 
-    gap: 28px;
+#six {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+}
+
+.hero-block-two {
+  display: flex;
+  flex-direction: row-reverse;
+  /*flex-wrap: wrap;*/
+  padding: 60px 28px 0px 28px;
+  gap: 28px;
 }
 
 .hero-block-two > * {
-    flex: 1 1 ;
-    max-width: 45%;
+  flex: 1 1;
+  max-width: 45%;
 }
 
-.hero-image-two{
-    position: relative;
-    max-width: 500px;
+.hero-image-two {
+  position: relative;
+  max-width: 500px;
 }
 
-.man-two{
-    position: absolute;
-    height: 285px;
-   top: -30px;
-
+.man-two {
+  position: absolute;
+  height: 285px;
+  top: -30px;
 }
 
-.thirteen{
-    position: absolute;
-    bottom: 30px;
-    right: 50px;
+.thirteen {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
 }
 
-.content-section-one{
-    position: relative;
+.content-section-one {
+  position: relative;
 }
 
-.man-three{
-    position: absolute;
-    top: -20px;
-    left: 200px;
-    height: 250px;
+.man-three {
+  position: absolute;
+  top: -20px;
+  left: 200px;
+  height: 250px;
 }
 
-.cloud-containers{
-    position: absolute;
+.cloud-containers {
+  position: absolute;
   top: 0px;
   left: 20px;
 }
 
-.hero-block-three{
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 60px 28px 0px 28px; 
-    gap: 28px;
+.hero-block-three {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 60px 28px 0px 28px;
+  gap: 28px;
 }
 
-.content-image-two{
-    position: relative;
-    max-width: 500px;
+.content-image-two {
+  position: relative;
+  max-width: 500px;
 }
 
-#man-four{
-    position: relative;
-    top: 10px;
-    right: 100px;
-    height: 350px;
+#man-four {
+  position: relative;
+  top: 10px;
+  right: 100px;
+  height: 350px;
 }
 
-.bar-graph{
-    position: absolute;
-    top: 175px;
-    left: 100px;
+.bar-graph {
+  position: absolute;
+  top: 175px;
+  left: 100px;
 }
 
-.lightning{
-    position: absolute;
-    top: 100px;
-    left: 250px;
+.lightning {
+  position: absolute;
+  top: 100px;
+  left: 250px;
 }
 
-.last-image{
-    position: relative;
-    max-width: 500px;
+.last-image {
+  position: relative;
+  max-width: 500px;
 }
 
-.man-five{
-    position: relative;
-    top: -10px;
-    left: 250px;
-    height: 350px;
+.man-five {
+  position: relative;
+  top: -10px;
+  left: 250px;
+  height: 350px;
 }
 
-.icon-search{
-    position: absolute;
-    top: 50px;
-    left: 50px;
+.icon-search {
+  position: absolute;
+  top: 50px;
+  left: 50px;
 }
 
 .card-container {
-    padding-top: 250px;
-    margin-bottom: 80px;
-    color: whitesmoke;
+  padding-top: 250px;
+  margin-bottom: 80px;
+  color: whitesmoke;
 }
 
 .card-holder {
-    position: relative;
-    background-color: #3d3d3d;
-    max-width: 800px;
-    z-index: 0;
-    padding: 0 36px 20px 36px;
-    border-radius: 16px;
+  position: relative;
+  background-color: #3d3d3d;
+  max-width: 800px;
+  z-index: 0;
+  padding: 0 36px 20px 36px;
+  border-radius: 16px;
 }
 
 .card-container .image-icons {
-    z-index: 10;
-    position: absolute;
-    top: -280px;
+  z-index: 10;
+  position: absolute;
+  top: -280px;
 }
 
 .oscar {
-    text-align: center;
-    margin-top: 140px;
+  text-align: center;
+  margin-top: 140px;
 }
 
 .descriptor {
-    max-width: 36ch;
-    text-align: center;
-    margin-bottom: 60px;
+  max-width: 36ch;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .final-sale {
-    background-color: #ffd150;
-    color: #111;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+  background-color: #ffd150;
+  color: #111;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .save-text {
-    padding: 40px;
-    color: #111;
-    text-align: center;
-    max-width: 56ch;
+  padding: 40px;
+  color: #111;
+  text-align: center;
+  max-width: 56ch;
 }
 
 .btn-container {
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
-}
-  
-.final-btns {
-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
 }
 
-@media (max-width: 768px){
-  .final-btns{
+.final-btns {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .final-btns {
     display: block;
   }
-
 }
-  
+
 .rounded-btn-holder {
-    margin-left: auto;
-    display: flex;
-    flex-direction: column; 
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .secondary.rounded {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin: 0 30px;
-    font-size: 20px;
-    background-color: #3d3d3d;
-    color: whitesmoke;
-    border: none;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 30px;
+  font-size: 20px;
+  background-color: #3d3d3d;
+  color: whitesmoke;
+  border: none;
+  cursor: pointer;
 }
 
 @media screen and(max-width: 500px) {
-  .btn .secondary{
+  .btn .secondary {
     width: 200px;
   }
-  .btn-container{
-  width: 100%;
+  .btn-container {
+    width: 100%;
   }
 }
 
-
 footer {
-    background-color: #3d3d3d;
-    color: whitesmoke;
-    padding: 40px;
+  background-color: #3d3d3d;
+  color: whitesmoke;
+  padding: 40px;
 }
 
 /* Footer styles */
 .footer-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-  .sign-off {
-    gap: 20px;
-  }
+.sign-off {
+  gap: 20px;
+}
 
-  .socials {
-    gap: 20px;
-    color: whitesmoke;
-  }
-  
+.socials {
+  gap: 20px;
+  color: whitesmoke;
+}
+
+.footer-wrapper > div {
+  flex: 1 1 200px;
+  margin-right: 20px;
+}
+
+.footer-wrapper div p a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
   .footer-wrapper > div {
-    flex: 1 1 200px; 
-    margin-right: 20px; 
+    flex-basis: calc(50% - 40px);
+    gap: 40px;
   }
 
-  .footer-wrapper div p a { 
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 14px;
+  .hero-block {
+    display: flex;
+    flex-direction: column;
   }
-  
-  /* Responsive styles */
-  @media screen and (max-width: 768px) {
-    .footer-wrapper > div {
-      flex-basis: calc(50% - 40px);
-      gap: 40px; 
-    }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-wrapper > div {
+    flex-basis: 100%;
   }
-  
-  @media screen and (max-width: 480px) {
-    .footer-wrapper > div {
-      flex-basis: 100%; 
-    }
-  }
-  
-
-
-
-
-
-
-
+}
