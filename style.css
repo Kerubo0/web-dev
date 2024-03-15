@@ -2,13 +2,18 @@
   box-sizing: border-box;
 }
 
+html { 
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #212121;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 20px;
+  overflow-x: hidden;
 }
 
 @media (max-width: 600px) {
@@ -141,6 +146,18 @@ body {
   max-width: 900px;
 }
 
+@media (max-width: 768px) {
+  .hero-text{
+    max-width: 570px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-text{
+    max-width: 360px;
+  }
+}
+
 .image-icons {
   position: relative;
 }
@@ -229,9 +246,58 @@ body {
   height: 50px;
 }
 
+@media (max-width: 700px) {
+  #main{
+    width: 250px;
+  }
+  .ellipse-div, .frame-child1, .frame-child2,
+  .frame-child3, .frame-child4 {
+    width: 55px;
+    height: 55px;
+  }
+
+  .ellipse-div{
+   bottom: 90%;
+   left: 30%;
+  }
+
+  .frame-child1{
+ top: 30%;
+ left: 80%;
+  }
+
+  .frame-child2{
+    top: 60%;
+    left: 85%;  }
+
+  .frame-child3{
+  top: 70%;
+  left: -5%;
+  }
+
+  .frame-child4{
+   top: 35%;
+   right: 85%;
+  }
+}
+
 .hero-explainer {
   color: white;
   text-align: center;
+  max-width: fit-content;
+}
+
+@media (max-width: 700px) {
+  .hero-explainer{
+    display: flex;
+    max-width: 500px;
+  }
+}
+
+@media ( max-width:500px) {
+  .hero-explainer{
+    max-width: 330px;
+  }
 }
 
 .btn {
@@ -275,23 +341,12 @@ p {
   max-width: 45%;
 }
 
-.hero-image-one {
+.first-man{
   position: relative;
-  max-width: 500px;
-}
-
-.man-one {
-  position: absolute;
   top: 10px;
-  left: 170px;
-  height: 350px;
+  left: 100px;
 }
 
-#six {
-  position: absolute;
-  top: 30px;
-  left: 25px;
-}
 
 .hero-block-two {
   display: flex;
@@ -306,25 +361,28 @@ p {
   max-width: 45%;
 }
 
-.hero-image-two {
+.second-man{
   position: relative;
-  max-width: 500px;
-}
-
-.man-two {
-  position: absolute;
-  height: 285px;
   top: -30px;
+  left: -50px;
 }
 
-.thirteen {
-  position: absolute;
-  bottom: 30px;
-  right: 50px;
+.hero-block-one {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 28px 0px 28px;
+  gap: 28px;
+}
+
+.hero-block-one > * {
+  flex: 1 1;
+  max-width: 45%;
 }
 
 .content-section-one {
   position: relative;
+  width: 450px;
+  height: 350px;
 }
 
 .man-three {
@@ -345,6 +403,11 @@ p {
   flex-direction: row-reverse;
   padding: 60px 28px 0px 28px;
   gap: 28px;
+}
+
+.hero-block-three >* {
+  flex: 1 1;
+  max-width: 45%;
 }
 
 .content-image-two {
@@ -391,6 +454,7 @@ p {
 
 .card-container {
   padding-top: 250px;
+  margin-top: 30pxgi;
   margin-bottom: 80px;
   color: whitesmoke;
 }
@@ -522,10 +586,94 @@ footer {
     display: flex;
     flex-direction: column;
   }
+
+  .hero-text-block{
+    max-width: fit-content;
+  }
+
+  .hero-block-two{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-block-one{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-section-one{
+    width: 400px;
+    height: 350px;
+  }
+
+  .man-three {
+    position: absolute;
+    top: 30px;
+    left: 200px;
+    height: 250px;
+  }
+  
+  .cloud-containers {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+  }
+
+  
+.hero-block-one > * {
+  flex: 1 1 75%;
+  max-width: 45%;
+}
+
+  .container{
+    max-width: max-content;
+  }
+
+  .hero-block-three{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .footer-wrapper > div {
     flex-basis: 100%;
   }
+
+  .hero-image-first{
+    position: relative;
+    max-width: 350px;
+  }
+
+  .first-man{
+    top: 10px;
+    left: 30px;
+    width: 370px;
+  }
+
+  .second-man{
+    width: 380px;
+  }
+
+  .icon-search{
+    left: -10px;
+  }
+
+  .man-five{
+    left: 100px;
+  }
+}
+
+.content-image-two{
+  width: 360px;
+}
+
+.bar-graph{
+width: 200px;
+left: 90px;
+}
+
+.lightning{
+width: 120px;
+left: 200px;
 }
