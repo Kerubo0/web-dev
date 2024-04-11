@@ -224,36 +224,35 @@ justify-content: center;
  
 p{
 font-weight: 500;
-font-size: 24px;
+font-size: 20px;
+line-height: 1.7em;
 }
 
 .head-text{
 text-align: center;
    margin: 10px auto;
-   max-width: 600px;
+   max-width: 1200px;
 }
 
 .hero-text {
    text-align: center;
    margin: 10px auto;
-   max-width: 60%;
-   /*max-width: 32ch;*/
-   max-width: 1000px;
+   max-width: 700px;
  }
 
- @media (max-width: 1200px){
-   .hero-text{
-     max-width: 70%;
-   }
- }
+.hero-explainer{
+  text-align: center;
+  margin: 10px auto;
+  max-width: 1250px;
+}
 
 h1{
-   font-size: 28px;
+   font-size: 30px;
    font-weight: 500;
 }
 
 h2{
- font-size: 26px;
+ font-size: 28px;
  font-weight: 600;
 }
 
@@ -768,30 +767,30 @@ h1{
     position: relative;
     left: 10%;
     width: 260px;
-    height: 300px;
+    height: auto;
    }
 
    .img-three{
     position: relative;
     width: 320px;
     right: 10%;
-    height: 330px;
+    height: auto;
    }
    .img-four{
      position: relative;
      width: 320px;
-     height: 350px;
+     height: auto;
    }
    .img-five{
     position: relative;
     width: 280px;
     right: 20%;
-    height: 340px;
+    height: auto;
    }
    .img-six{
     position: relative;
     width: 300px;
-    height: 330px;
+    height: auto;
    }
   }
 
