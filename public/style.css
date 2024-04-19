@@ -132,17 +132,22 @@ ul li ul.dropdown li {
 }
 
 ul li ul.dropdown {
-  width: fit-content;
-  background: #212121;
-  position: absolute;
+  background-color: #3d3d3d;
+  border: 1px solid;
+  border-color: #ffd150;
+  border-radius: 10px;
+  position: absolute;                          
   z-index: 999;
   display: none;
   padding-left: 10px;
+  /*transition-delay: 500ms;*/
 }
 
-ul li:hover ul.dropdown{
-  display: block;
+.ellipse-img{
+  width: 20px;
+  height: 20px;
 }
+
 
 
 /* DROPDOWN MENU */
@@ -178,6 +183,25 @@ width: 100%;
 display: flex;
 justify-content: center;
 }
+
+.titled{
+  font-size: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ #expand_less{
+  margin-left: 30px;
+   }
+
+   #angle-one{
+    background-color: #3d3d3d;
+    border-radius: 15px;
+    margin-top: 3px ;
+    width: 15px;
+  }
 
 .angle{
   background-color: #3d3d3d;
@@ -542,6 +566,12 @@ width: 200px;
 .btn-container{
 width: 100%;
 }
+}
+
+.btn_container_p{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
 }
 
 
