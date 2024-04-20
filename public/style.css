@@ -209,6 +209,12 @@ justify-content: center;
   margin-top: 3px ;
   width: 15px;
  }
+
+ .rotate180 {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease; 
+ }
+
 /* RESPONSIVE DESIGN */
 @media(max-width: 992px){
 .navbar .links,
