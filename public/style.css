@@ -249,6 +249,11 @@ justify-content: center;
   max-width: 500px;
 }
 
+.img-one{
+  width: 400px;
+  height: auto;
+}
+
 
 /*  HERO */
  
@@ -491,7 +496,7 @@ border-radius: 16px;
 .card-container .image-icons {
 z-index: 10;
 position: absolute;
-top: -300px;
+top: -270px;
 }
 
 .nick {
